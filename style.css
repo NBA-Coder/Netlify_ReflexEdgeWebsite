@@ -1002,7 +1002,7 @@ button {
     position: absolute;
     inset: -15px;
 
-    background-image: url("andrej-lisakov-3A4XZUopCJA-unsplash.jpg");
+    background-image: url("images/andrej-lisakov-3A4XZUopCJA-unsplash.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2227,11 +2227,10 @@ body.page-leaving {
     width: 100% !important;
     height: 100% !important;
 
-    background-image: url("leone-venter-VieM9BdZKFo-unsplash.jpg") !important;
+    background-image: url("images/leone-venter-VieM9BdZKFo-unsplash.jpg") !important;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
-    filter: blur(3px);
 
     /* IMPORTANT: no gradient */
     background-color: transparent !important;
