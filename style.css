@@ -2254,3 +2254,926 @@ body.page-leaving {
     position: relative !important;
     z-index: 2 !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   REFLEXEDGE RESPONSIVE SYSTEM
+   ADD THIS AT THE VERY END OF style.css
+   ========================================================= */
+
+
+/* =========================================================
+   1. GLOBAL RESPONSIVE SAFETY
+   ========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    max-width: 100%;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   2. LARGE LAPTOP / SMALL DESKTOP
+   1200px AND BELOW
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .site-header {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .desktop-nav {
+        gap: 25px;
+    }
+
+    .hero-content {
+        width: min(1100px, 92%) !important;
+    }
+
+    .hero-text {
+        width: 65%;
+    }
+
+    .hero-floating-image {
+        width: 330px;
+        height: 330px;
+        right: 1%;
+    }
+
+    .solutions-section {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .capabilities {
+        padding-left: 6%;
+        padding-right: 6%;
+        gap: 55px;
+    }
+
+    .footer-grid {
+        width: calc(100% - 60px);
+        gap: 30px;
+    }
+}
+
+
+/* =========================================================
+   3. TABLET / SMALL LAPTOP
+   1000px AND BELOW
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    /* -------------------------
+       HEADER
+       ------------------------- */
+
+    .site-header {
+        height: 70px;
+        padding: 0 25px;
+    }
+
+    .brand {
+        gap: 8px;
+        font-size: 15px;
+    }
+
+    .brand img {
+        width: 90px;
+        height: 43px;
+    }
+
+    .desktop-nav {
+        gap: 20px;
+    }
+
+    .desktop-nav a {
+        font-size: 13px;
+    }
+
+
+    /* -------------------------
+       HERO
+       ------------------------- */
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero-content {
+        width: calc(100% - 60px) !important;
+        padding: 75px 0 90px;
+    }
+
+    .hero-text {
+        width: 68%;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 6vw, 64px);
+        max-width: 650px;
+    }
+
+    .hero-lead {
+        font-size: 15px;
+        max-width: 520px;
+    }
+
+    .hero-floating-image {
+        width: 290px;
+        height: 290px;
+        right: -10px;
+    }
+
+
+    /* -------------------------
+       SOLUTIONS
+       ------------------------- */
+
+    .solutions-section {
+        padding: 80px 30px 90px;
+    }
+
+    .section-heading {
+        gap: 35px;
+        align-items: flex-start;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(28px, 4vw, 42px);
+    }
+
+    .section-heading > p {
+        max-width: 320px;
+    }
+
+    .solution-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .card-image {
+        height: 240px;
+    }
+
+
+    /* -------------------------
+       WHY REFLEXEDGE
+       ------------------------- */
+
+    .capabilities {
+        grid-template-columns: 1fr;
+        gap: 55px;
+        padding: 80px 7%;
+        min-height: auto;
+    }
+
+    .capability-copy h2 {
+        max-width: 700px;
+        font-size: clamp(30px, 5vw, 46px);
+    }
+
+    .capability-copy p {
+        max-width: 650px;
+    }
+
+    .capability-list {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   4. TABLET
+   800px AND BELOW
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    /* -------------------------
+       HEADER
+       ------------------------- */
+
+    .site-header {
+        height: 68px;
+        padding: 0 22px;
+    }
+
+    .brand {
+        font-size: 14px;
+    }
+
+    .brand img {
+        width: 82px;
+        height: 40px;
+    }
+
+    /* Hide desktop navigation */
+
+    .desktop-nav {
+        display: none;
+    }
+
+    /* Show hamburger */
+
+    .menu-button {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+
+    /* -------------------------
+       MOBILE NAVIGATION
+       ------------------------- */
+
+    .desktop-nav.open {
+        display: flex;
+
+        position: absolute;
+
+        top: 68px;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 12px 22px 20px;
+
+        background: rgba(255, 255, 255, 0.98);
+
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+        z-index: 999;
+    }
+
+    .desktop-nav.open a {
+        width: 100%;
+        padding: 14px 5px;
+
+        font-size: 14px;
+
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .desktop-nav.open a.active::after {
+        display: none;
+    }
+
+    .desktop-nav.open .search-button {
+        margin-top: 12px;
+    }
+
+
+    /* -------------------------
+       HERO
+       ------------------------- */
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        width: calc(100% - 44px) !important;
+        padding: 75px 0 95px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero h1 {
+        max-width: 100%;
+        font-size: clamp(38px, 8vw, 58px);
+        line-height: 1.05;
+    }
+
+    .hero-lead {
+        max-width: 600px;
+        font-size: 15px;
+    }
+
+    /* Move floating image away from the text */
+
+    .hero-floating-image {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        width: min(300px, 70vw);
+        height: min(300px, 70vw);
+
+        margin: 35px auto 0;
+
+        transform: none;
+    }
+
+    @keyframes heroImageFloat {
+
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-8px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+
+    }
+
+    /* Scroll indicator */
+
+    .hero-scroll {
+        right: 22px;
+        bottom: 22px;
+        font-size: 8px;
+    }
+
+
+    /* -------------------------
+       SOLUTIONS
+       ------------------------- */
+
+    .solutions-section {
+        padding: 75px 22px 85px;
+    }
+
+    .section-heading {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+        max-width: 650px;
+        font-size: clamp(29px, 6vw, 42px);
+    }
+
+    .section-heading > p {
+        max-width: 600px;
+        margin-top: 20px;
+    }
+
+    .solution-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .card-image {
+        height: 220px;
+    }
+
+    .card-body {
+        padding: 20px 18px 22px;
+    }
+
+    .card-body h3 {
+        font-size: 16px;
+    }
+
+
+    /* -------------------------
+       CAPABILITIES
+       ------------------------- */
+
+    .capabilities {
+        padding: 75px 7%;
+        gap: 45px;
+    }
+
+    .capability-copy h2 {
+        font-size: clamp(29px, 6vw, 44px);
+    }
+
+    .capability-list div {
+        min-height: 75px;
+    }
+}
+
+
+/* =========================================================
+   5. MOBILE
+   600px AND BELOW
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -------------------------
+       HEADER
+       ------------------------- */
+
+    .site-header {
+        height: 64px;
+        padding: 0 17px;
+    }
+
+    .brand {
+        min-width: 0;
+        gap: 6px;
+        font-size: 12px;
+    }
+
+    .brand img {
+        width: 70px;
+        height: 37px;
+        flex-shrink: 0;
+    }
+
+    .brand span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .menu-button {
+        width: 38px;
+        height: 38px;
+    }
+
+    .desktop-nav.open {
+        top: 64px;
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+
+    /* -------------------------
+       HERO
+       ------------------------- */
+
+    .hero-content {
+        width: calc(100% - 34px) !important;
+        padding: 60px 0 85px;
+    }
+
+    .eyebrow {
+        font-size: 8px;
+        letter-spacing: 0.13em;
+        padding: 6px 9px;
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        font-size: clamp(34px, 10vw, 48px);
+        line-height: 1.05;
+        letter-spacing: -0.045em;
+        margin-bottom: 20px;
+    }
+
+    .hero-lead {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    .service-pills {
+        gap: 8px;
+        margin-bottom: 22px;
+    }
+
+    .service-pills span {
+        padding: 8px 11px;
+        font-size: 10px;
+    }
+
+    .platforms {
+        gap: 8px;
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .platforms i {
+        width: 3px;
+        height: 3px;
+    }
+
+    .hero-cta {
+        margin-top: 30px;
+        padding: 13px 16px 13px 18px;
+        gap: 14px;
+        font-size: 11px;
+    }
+
+    .hero-cta span {
+        font-size: 17px;
+    }
+
+    .hero-floating-image {
+        width: min(250px, 75vw);
+        height: min(250px, 75vw);
+        margin-top: 30px;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+
+    /* -------------------------
+       SOLUTIONS
+       ------------------------- */
+
+    .solutions-section {
+        padding: 65px 17px 75px;
+    }
+
+    .section-kicker {
+        font-size: 9px;
+        margin-bottom: 14px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(27px, 8vw, 38px);
+        line-height: 1.12;
+    }
+
+    .section-heading > p {
+        font-size: 12px;
+        line-height: 1.75;
+        margin-top: 17px;
+    }
+
+    /* One card per row */
+
+    .solution-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .solution-card {
+        width: 100%;
+    }
+
+    .card-image {
+        height: 230px;
+    }
+
+    .card-body {
+        padding: 20px 18px 22px;
+    }
+
+    .card-body > span {
+        font-size: 8px;
+    }
+
+    .card-body h3 {
+        font-size: 17px;
+    }
+
+    .card-body p {
+        min-height: auto;
+        font-size: 11px;
+    }
+
+
+    /* -------------------------
+       WHY REFLEXEDGE
+       ------------------------- */
+
+    .capabilities {
+        grid-template-columns: 1fr;
+        gap: 40px;
+
+        padding: 65px 22px 70px;
+    }
+
+    .capability-copy h2 {
+        font-size: clamp(28px, 8vw, 39px);
+        line-height: 1.1;
+    }
+
+    .capability-copy p {
+        font-size: 12px;
+        line-height: 1.75;
+        margin: 20px 0 27px;
+    }
+
+    .outline-button {
+        padding: 13px 16px;
+        gap: 18px;
+        font-size: 11px;
+    }
+
+    .outline-button span {
+        font-size: 16px;
+    }
+
+    .capability-list div {
+        min-height: 70px;
+        grid-template-columns: 35px 1fr 20px;
+    }
+
+    .capability-list strong {
+        font-size: 9px;
+    }
+
+    .capability-list span {
+        font-size: 12px;
+    }
+
+    .capability-list b {
+        font-size: 14px;
+    }
+
+
+    /* -------------------------
+       FOOTER
+       ------------------------- */
+
+    .footer-grid {
+        width: calc(100% - 34px);
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 20px;
+        padding: 38px 0 32px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-brand > p {
+        max-width: 100%;
+        font-size: 10px;
+    }
+
+    .footer-column h4 {
+        font-size: 10px;
+    }
+
+    .footer-column a,
+    .footer-column p {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   6. SMALL PHONES
+   420px AND BELOW
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .site-header {
+        padding: 0 13px;
+    }
+
+    .brand {
+        font-size: 11px;
+    }
+
+    .brand img {
+        width: 62px;
+        height: 34px;
+    }
+
+
+    /* HERO */
+
+    .hero-content {
+        width: calc(100% - 26px) !important;
+        padding-top: 52px;
+        padding-bottom: 75px;
+    }
+
+    .eyebrow {
+        font-size: 7px;
+        letter-spacing: 0.1em;
+        padding: 5px 8px;
+    }
+
+    .hero h1 {
+        font-size: clamp(31px, 10.5vw, 43px);
+    }
+
+    .hero-lead {
+        font-size: 13px;
+    }
+
+    .service-pills {
+        gap: 7px;
+    }
+
+    .service-pills span {
+        padding: 7px 9px;
+        font-size: 9px;
+    }
+
+    .platforms {
+        font-size: 9px;
+        gap: 6px;
+    }
+
+    .hero-cta {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 27px;
+    }
+
+    .hero-floating-image {
+        width: min(220px, 70vw);
+        height: min(220px, 70vw);
+    }
+
+
+    /* SOLUTIONS */
+
+    .solutions-section {
+        padding: 55px 13px 65px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .solution-grid {
+        gap: 15px;
+    }
+
+    .card-image {
+        height: 210px;
+    }
+
+
+    /* CAPABILITIES */
+
+    .capabilities {
+        padding: 55px 18px 60px;
+    }
+
+    .capability-copy h2 {
+        font-size: 28px;
+    }
+
+    .capability-list div {
+        grid-template-columns: 30px 1fr 18px;
+        min-height: 65px;
+    }
+
+    .capability-list span {
+        font-size: 11px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        width: calc(100% - 26px);
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 32px 0 28px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom .container {
+        padding: 0 12px;
+    }
+
+    .footer-bottom p {
+        font-size: 8px;
+    }
+}
+
+
+/* =========================================================
+   7. VERY SMALL PHONES
+   360px AND BELOW
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .brand span {
+        font-size: 10px;
+    }
+
+    .brand img {
+        width: 55px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .hero-lead {
+        font-size: 12px;
+    }
+
+    .service-pills span {
+        font-size: 8px;
+        padding: 6px 8px;
+    }
+
+    .platforms {
+        font-size: 8px;
+    }
+
+    .card-image {
+        height: 190px;
+    }
+
+    .card-body h3 {
+        font-size: 15px;
+    }
+
+    .capability-copy h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* =========================================================
+   8. LANDSCAPE PHONES
+   ========================================================= */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .site-header {
+        height: 60px;
+    }
+
+    .desktop-nav.open {
+        top: 60px;
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+
+    .hero-content {
+        padding-top: 45px;
+        padding-bottom: 55px;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+    .hero-floating-image {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+
+/* =========================================================
+   9. REDUCE MOTION FOR USERS WHO PREFER IT
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
