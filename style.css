@@ -2258,6 +2258,149 @@ body.page-leaving {
 
 
 
+/* =========================================================
+SCROLL ANIMATION
+MATCHES YOUR EXISTING .animate-in SYSTEM
+========================================================= */
+
+.core-section .section-heading.centered,
+.core-card {
+opacity: 0;
+transform: translateY(35px);
+
+
+transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+
+
+}
+
+/* Heading appears first */
+
+.core-section .section-heading.centered.animate-in {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* Cards */
+
+.core-card.animate-in {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* Staggered animation */
+
+.core-card:nth-child(1) {
+transition-delay: 0.05s;
+}
+
+.core-card:nth-child(2) {
+transition-delay: 0.15s;
+}
+
+.core-card:nth-child(3) {
+transition-delay: 0.25s;
+}
+
+.core-card:nth-child(4) {
+transition-delay: 0.35s;
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+
+.core-section {
+    padding: 90px 0;
+}
+
+.core-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.core-card:nth-child(2) {
+    border-right: none;
+}
+
+.core-card:nth-child(1),
+.core-card:nth-child(2) {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+
+.core-section {
+    padding: 75px 0;
+}
+
+.core-section .container {
+    width: 90%;
+}
+
+.core-section .section-heading.centered {
+    margin-bottom: 45px;
+}
+
+.core-section .section-heading h2 {
+    font-size: 32px;
+    letter-spacing: -0.8px;
+}
+
+.core-grid {
+    grid-template-columns: 1fr;
+}
+
+.core-card {
+    padding: 38px 25px;
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.core-card:last-child {
+    border-bottom: none;
+}
+
+.core-card p {
+    max-width: 100%;
+}
+
+
+}
+
+/* =========================================================
+SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+
+.core-section {
+    padding: 65px 0;
+}
+
+.core-section .section-heading h2 {
+    font-size: 29px;
+}
+
+.core-card {
+    padding: 34px 20px;
+}
+
+
+}
 
 
 
@@ -3177,3 +3320,5 @@ a {
         scroll-behavior: auto !important;
     }
 }
+
+
