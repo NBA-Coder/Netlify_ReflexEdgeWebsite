@@ -396,6 +396,9 @@ button {
 
 
 
+
+
+
 /* =========================================================
    HERO OVERLAY
    ========================================================= */
@@ -3322,3 +3325,26 @@ a {
 }
 
 
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .solutions-section {
+        margin-top: -50px !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .solutions-section {
+        margin-top: -60px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .solutions-section {
+        margin-top: -70px !important;
+    }
+}
