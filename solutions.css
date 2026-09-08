@@ -1965,3 +1965,199 @@ button {
     }
 }
 
+
+
+
+
+/* =========================================================
+   OUR SOLUTIONS — MOBILE PANELS
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Solutions section */
+    .solutions-section {
+        padding: 70px 0;
+        overflow: hidden;
+    }
+
+
+    /* Section heading */
+    .section-heading {
+        width: calc(100% - 36px);
+        margin: 0 auto 45px;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+        line-height: 1.1;
+        letter-spacing: -1.5px;
+    }
+
+    .section-heading p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* Solution panels */
+    .solutions-grid {
+        width: calc(100% - 36px);
+        max-width: 100%;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    /* Individual panel */
+    .solution-card {
+        width: 100%;
+        min-width: 0;
+        min-height: auto;
+
+        padding: 30px 24px;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+
+    /* Panel number */
+    .solution-number {
+        top: 20px;
+        right: 20px;
+
+        font-size: 12px;
+    }
+
+
+    /* Icon */
+    .solution-icon {
+        width: 52px;
+        height: 52px;
+
+        margin-bottom: 22px;
+
+        border-radius: 13px;
+
+        font-size: 21px;
+    }
+
+
+    /* Panel title */
+    .solution-card h3 {
+        font-size: 21px;
+        line-height: 1.25;
+
+        margin-bottom: 14px;
+
+        padding-right: 25px;
+    }
+
+
+    /* Panel description */
+    .solution-card > p {
+        font-size: 14px;
+        line-height: 1.75;
+
+        margin-bottom: 22px;
+    }
+
+
+    /* Panel list */
+    .solution-card ul {
+        width: 100%;
+    }
+
+    .solution-card li {
+        align-items: flex-start;
+
+        gap: 9px;
+
+        font-size: 13px;
+        line-height: 1.5;
+
+        margin-bottom: 11px;
+    }
+
+    .solution-card li i {
+        margin-top: 4px;
+        flex-shrink: 0;
+    }
+
+
+    /* Remove desktop hover movement on touch screens */
+    .solution-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .solution-card:hover::before {
+        transform: scaleX(0);
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .solutions-section {
+        padding: 55px 0;
+    }
+
+    .section-heading {
+        width: calc(100% - 30px);
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .section-heading p {
+        font-size: 14px;
+    }
+
+
+    .solutions-grid {
+        width: calc(100% - 30px);
+        gap: 16px;
+    }
+
+
+    .solution-card {
+        padding: 26px 20px;
+    }
+
+
+    .solution-icon {
+        width: 48px;
+        height: 48px;
+
+        font-size: 19px;
+    }
+
+
+    .solution-card h3 {
+        font-size: 19px;
+    }
+
+
+    .solution-card > p {
+        font-size: 13.5px;
+        line-height: 1.7;
+    }
+
+
+    .solution-card li {
+        font-size: 12.5px;
+    }
+}
