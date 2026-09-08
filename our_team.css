@@ -2143,3 +2143,1243 @@ a {
         font-size: 12px;
     }
 }
+
+
+
+
+
+/* =========================================================
+   ABOUT REFLEXEDGE
+   Premium Corporate Section
+   ========================================================= */
+
+.about-reflexedge {
+    position: relative;
+    width: 100%;
+    padding: 115px 0 125px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+/* Subtle decorative background */
+.about-reflexedge::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    top: -180px;
+    right: -150px;
+    border-radius: 50%;
+    background: rgba(4, 99, 7, 0.045);
+    pointer-events: none;
+}
+
+/* Bottom fade */
+.about-reflexedge::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        #ffffff
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.about-reflexedge-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(1240px, 92%);
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.about-reflexedge-content {
+    width: 100%;
+    max-width: 1000px;
+
+    opacity: 0;
+    transform: translateY(45px);
+
+    animation: aboutContentReveal 1.1s cubic-bezier(.22, 1, .36, 1)
+               0.15s forwards;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.about-reflexedge-label {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+
+    color: #046307;
+
+    opacity: 0;
+    transform: translateX(-25px);
+
+    animation: aboutLabelReveal 0.8s ease-out
+               0.35s forwards;
+}
+
+
+/* Small line beside label */
+.about-reflexedge-label::before {
+    content: "";
+
+    width: 32px;
+    height: 2px;
+
+    background: #b01657;
+
+    transform-origin: left;
+    transform: scaleX(0);
+
+    animation: labelLineReveal 0.7s ease-out
+               0.65s forwards;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.about-reflexedge-content h2 {
+    margin: 0 0 28px;
+
+    max-width: 800px;
+
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.05;
+
+    font-weight: 700;
+    letter-spacing: -1.8px;
+
+    color: #333333;
+
+    opacity: 0;
+    transform: translateY(35px);
+
+    animation: aboutHeadingReveal 1s cubic-bezier(.22, 1, .36, 1)
+               0.5s forwards;
+}
+
+
+/* Green heading line */
+.about-reflexedge-content h2 span {
+    display: block;
+
+    color: #046307;
+
+    position: relative;
+}
+
+
+/* Animated underline */
+.about-reflexedge-content h2 span::after {
+    content: "";
+
+    display: block;
+
+    width: 65px;
+    height: 3px;
+
+    margin-top: 18px;
+
+    background: #b01657;
+
+    transform-origin: left;
+    transform: scaleX(0);
+
+    animation: headingLineReveal 0.8s ease-out
+               1.25s forwards;
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+   ========================================================= */
+
+.about-reflexedge-content > p {
+    max-width: 850px;
+
+    margin: 0 0 18px;
+
+    font-size: 16px;
+    line-height: 1.85;
+
+    color: #333333;
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    animation: paragraphReveal 0.9s cubic-bezier(.22, 1, .36, 1)
+               forwards;
+}
+
+
+/* First paragraph */
+.about-reflexedge-content > p:nth-of-type(1) {
+    animation-delay: 0.85s;
+}
+
+
+/* Second paragraph */
+.about-reflexedge-content > p:nth-of-type(2) {
+    animation-delay: 1s;
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+   ========================================================= */
+
+.about-reflexedge-highlights {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-top: 42px;
+}
+
+
+/* =========================================================
+   INDIVIDUAL HIGHLIGHT
+   ========================================================= */
+
+.about-highlight {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 16px;
+
+    padding: 25px 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.035);
+
+    opacity: 0;
+    transform: translateY(35px);
+
+    animation: highlightReveal 0.9s cubic-bezier(.22, 1, .36, 1)
+               forwards;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* Staggered animation */
+.about-highlight:nth-child(1) {
+    animation-delay: 1.2s;
+}
+
+.about-highlight:nth-child(2) {
+    animation-delay: 1.35s;
+}
+
+.about-highlight:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+
+/* =========================================================
+   HIGHLIGHT HOVER
+   ========================================================= */
+
+.about-highlight:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(4, 99, 7, 0.25);
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Small top accent */
+.about-highlight::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #046307;
+
+    transition: width 0.4s ease;
+}
+
+
+.about-highlight:hover::before {
+    width: 100%;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.about-highlight > i {
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+
+    color: #046307;
+
+    background: #e8f2e8;
+
+    border-radius: 50%;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        color 0.35s ease;
+}
+
+
+.about-highlight:hover > i {
+    transform: rotate(-8deg) scale(1.08);
+
+    background: #046307;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   HIGHLIGHT TITLE
+   ========================================================= */
+
+.about-highlight h4 {
+    margin: 2px 0 7px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #111111;
+}
+
+
+/* =========================================================
+   HIGHLIGHT DESCRIPTION
+   ========================================================= */
+
+.about-highlight p {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    color: #6b6b6b;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes aboutContentReveal {
+    from {
+        opacity: 0;
+        transform: translateY(45px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes aboutLabelReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes labelLineReveal {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+
+@keyframes aboutHeadingReveal {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes headingLineReveal {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+
+@keyframes paragraphReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes highlightReveal {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .about-reflexedge {
+        padding: 90px 0 105px;
+    }
+
+    .about-reflexedge-content h2 {
+        font-size: 52px;
+    }
+
+    .about-reflexedge-highlights {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .about-highlight {
+        padding: 22px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .about-reflexedge {
+        padding: 70px 0 85px;
+    }
+
+    .about-reflexedge-container {
+        width: 90%;
+    }
+
+    .about-reflexedge-label {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-bottom: 17px;
+    }
+
+    .about-reflexedge-label::before {
+        width: 25px;
+    }
+
+    .about-reflexedge-content h2 {
+        font-size: 38px;
+        line-height: 1.08;
+        letter-spacing: -1px;
+
+        margin-bottom: 25px;
+    }
+
+    .about-reflexedge-content h2 span::after {
+        width: 50px;
+        height: 2px;
+        margin-top: 14px;
+    }
+
+    .about-reflexedge-content > p {
+        font-size: 14px;
+        line-height: 1.75;
+        margin-bottom: 15px;
+    }
+
+    .about-reflexedge-highlights {
+        margin-top: 32px;
+        gap: 12px;
+    }
+
+    .about-highlight {
+        gap: 14px;
+        padding: 20px 17px;
+    }
+
+    .about-highlight > i {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+    .about-highlight h4 {
+        font-size: 15px;
+    }
+
+    .about-highlight p {
+        font-size: 12.5px;
+    }
+
+    .about-reflexedge::before {
+        width: 280px;
+        height: 280px;
+        top: -120px;
+        right: -120px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-reflexedge-content,
+    .about-reflexedge-label,
+    .about-reflexedge-content h2,
+    .about-reflexedge-content > p,
+    .about-highlight,
+    .about-reflexedge-label::before,
+    .about-reflexedge-content h2 span::after {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .about-highlight,
+    .about-highlight > i,
+    .about-highlight::before {
+        transition: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   ABOUT REFLEXEDGE SECTION
+   ========================================================= */
+
+.about-reflexedge {
+    width: 100%;
+    padding: 110px 0;
+
+    position: relative;
+    overflow: hidden;
+
+    background-image: url("pexels-luna-lovegood-4087271.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+/* =========================================================
+   BLURRED BACKGROUND
+   ========================================================= */
+
+.about-reflexedge::before {
+    content: "";
+
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+
+    background-image: url("pexels-luna-lovegood-4087271.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(5px);
+
+    z-index: 0;
+}
+
+
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.about-reflexedge-container {
+    position: relative;
+    z-index: 1;
+
+    width: min(1240px, 92%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.about-reflexedge-content {
+    max-width: 850px;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.about-reflexedge-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: var(--green, #046307);
+
+    position: relative;
+    padding-left: 38px;
+}
+
+
+/* Pink line beside label */
+
+.about-reflexedge-label::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    width: 26px;
+    height: 2px;
+
+    background: var(--pink, #b01657);
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.about-reflexedge-content h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(38px, 5vw, 70px);
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    color: #333333;
+}
+
+.about-reflexedge-content h2 span {
+    display: block;
+
+    color: var(--green, #046307);
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+   ========================================================= */
+
+.about-reflexedge-content > p {
+    max-width: 760px;
+
+    margin: 0 0 18px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: var(--muted, #6b6b6b);
+}
+
+
+/* =========================================================
+   SMALL BRAND ACCENT
+   ========================================================= */
+
+.about-reflexedge-content::after {
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 3px;
+
+    margin-top: 28px;
+
+    background: var(--pink, #b01657);
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+.about-reflexedge-content {
+    animation: aboutReflexedgeIn 1s ease both;
+}
+
+@keyframes aboutReflexedgeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .about-reflexedge {
+        padding: 80px 0;
+    }
+
+    .about-reflexedge-container {
+        width: 90%;
+    }
+
+    .about-reflexedge-content {
+        max-width: 100%;
+    }
+
+    .about-reflexedge-content h2 {
+        font-size: 46px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .about-reflexedge {
+        padding: 65px 0;
+    }
+
+    .about-reflexedge-container {
+        width: 90%;
+    }
+
+    .about-reflexedge-label {
+        font-size: 11px;
+        letter-spacing: 1.8px;
+        padding-left: 32px;
+    }
+
+    .about-reflexedge-label::before {
+        width: 22px;
+    }
+
+    .about-reflexedge-content h2 {
+        font-size: 35px;
+        line-height: 1.1;
+    }
+
+    .about-reflexedge-content > p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .about-reflexedge-content::after {
+        width: 42px;
+        height: 2px;
+        margin-top: 24px;
+    }
+
+}
+
+
+
+
+/* =========================================================
+   HIGHLIGHTS
+   ========================================================= */
+
+.about-reflexedge-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    margin-top: 35px;
+}
+
+.about-highlight {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.about-highlight > i {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--green-light, #e8f2e8);
+    color: var(--green, #046307);
+
+    font-size: 17px;
+}
+
+.about-highlight h4 {
+    margin: 0 0 3px;
+
+    font-size: 16px;
+    color: var(--ink, #111111);
+}
+
+.about-highlight p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: var(--muted, #6b6b6b);
+}
+
+
+/* =========================================================
+   IMAGE / VISUAL
+   ========================================================= */
+
+.about-reflexedge-visual {
+    position: relative;
+    padding: 20px;
+}
+
+.about-image-wrapper {
+    position: relative;
+
+    width: 100%;
+    height: 520px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.about-image-wrapper::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.25),
+        transparent 50%
+    );
+
+    pointer-events: none;
+}
+
+.about-image-wrapper img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.7s ease;
+}
+
+.about-image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   ACCENT CARD
+   ========================================================= */
+
+.about-accent-card {
+    position: absolute;
+
+    left: -5px;
+    bottom: 0;
+
+    max-width: 245px;
+
+    padding: 22px 25px;
+
+    background: var(--pink, #b01657);
+    color: #ffffff;
+
+    border-radius: 14px;
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.about-accent-card strong {
+    font-size: 21px;
+}
+
+.about-accent-card span {
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   OUR TEAM INTRO
+   ========================================================= */
+
+.our-team {
+    width: 100%;
+    padding: 110px 0;
+    background: #ffffff;
+}
+
+.team-header {
+    width: min(800px, 92%);
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+.team-header .team-label {
+    padding-left: 0;
+}
+
+.team-header .team-label::before {
+    display: none;
+}
+
+.team-header h2 {
+    margin: 0 0 20px;
+
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1.1;
+
+    color: var(--ink, #111111);
+}
+
+.team-header h2 span {
+    color: var(--green, #046307);
+}
+
+.team-header p {
+    max-width: 650px;
+    margin: 0 auto;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: var(--muted, #6b6b6b);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .about-reflexedge {
+        padding: 80px 0;
+    }
+
+    .about-reflexedge-container {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .about-reflexedge-content {
+        max-width: 100%;
+    }
+
+    .about-reflexedge-visual {
+        max-width: 650px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .about-image-wrapper {
+        height: 450px;
+    }
+
+    .about-accent-card {
+        left: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .about-reflexedge {
+        padding: 65px 0;
+    }
+
+    .about-reflexedge-container {
+        width: 90%;
+        gap: 40px;
+    }
+
+    .about-reflexedge-content h2 {
+        font-size: 36px;
+    }
+
+    .about-reflexedge-content > p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .about-reflexedge-highlights {
+        margin-top: 28px;
+        gap: 15px;
+    }
+
+    .about-highlight {
+        align-items: flex-start;
+    }
+
+    .about-highlight > i {
+        width: 42px;
+        height: 42px;
+        font-size: 15px;
+    }
+
+    .about-highlight h4 {
+        font-size: 15px;
+    }
+
+    .about-highlight p {
+        font-size: 13px;
+    }
+
+    .about-reflexedge-visual {
+        padding: 8px 0 35px;
+    }
+
+    .about-image-wrapper {
+        height: 330px;
+        border-radius: 18px;
+    }
+
+    .about-accent-card {
+        left: 15px;
+        bottom: 0;
+
+        padding: 17px 20px;
+        max-width: 210px;
+    }
+
+    .about-accent-card strong {
+        font-size: 18px;
+    }
+
+    .about-accent-card span {
+        font-size: 12px;
+    }
+
+    .our-team {
+        padding: 70px 0;
+    }
+
+    .team-header {
+        margin-bottom: 40px;
+    }
+
+    .team-header h2 {
+        font-size: 34px;
+    }
+
+    .team-header p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
