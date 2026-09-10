@@ -329,7 +329,7 @@ a {
             rgba(255,255,255,0.82),
             rgba(255,255,255,0.15)
         ),
-        url("/images/team-background.jpg")
+        url("../images/team-background.jpg")
         center / cover no-repeat;
 
     overflow: hidden;
@@ -2857,7 +2857,7 @@ a {
     position: relative;
     overflow: hidden;
 
-    background-image: url("/images/pexels-luna-lovegood-4087271.jpg");
+    background-image: url("../images/pexels-luna-lovegood-4087271.jpg");
     
     background-size: cover;
     background-position: center;
@@ -2883,7 +2883,7 @@ a {
     right: -15px;
     bottom: -15px;
 
-    background-image: url("/images/pexels-luna-lovegood-4087271.jpg");
+    background-image: url("../images/pexels-luna-lovegood-4087271.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
