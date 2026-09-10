@@ -316,7 +316,7 @@ button {
     align-items: center;
 
     background:
-        url("/images/pexels-dada-_design-240566386-12277635.jpg") center/cover no-repeat;
+        url("../images/pexels-dada-_design-240566386-12277635.jpg") center/cover no-repeat;
 
     overflow: hidden;
 }
@@ -1193,7 +1193,7 @@ button {
 
     padding: 120px 25px;
 
-    background-image: url(/images/ipexels-pnw-prod-8251151.jpg);
+    background-image: url(../images/ipexels-pnw-prod-8251151.jpg);
 
     color: white;
 
